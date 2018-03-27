@@ -7,13 +7,13 @@
 - **Enzyme**: Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.
 
 ## Installation
-```
+```bash
 npm i --save-dev jest
 npm i --save-dev enzyme enzyme-adapter-react-16
 ```
 
 ## Mocking session storage
-```
+```js
 class Common {
     getStorageMock() {
         let store = {};
@@ -44,7 +44,7 @@ export default new Common();
 - Use **Shallow** when rendering component without its children
 - Use **Mount** when you need to render children, test lifecycle components or provide a store
 
-```
+```js
 describe('Clock panel component tests', () => {
     it('clock panel renders', () => {
         const clockPanel = mount(<ClockPanel store={WorkingHoursStore} />);
@@ -54,7 +54,7 @@ describe('Clock panel component tests', () => {
 ``` 
 
 ## event simulation and state assertion
-```
+```js
 it('error state when username or password not entered', () => {
     const login = shallow(<Login />);
     login.find('button').simulate('click');
