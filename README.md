@@ -53,7 +53,7 @@ describe('Clock panel component tests', () => {
 });
 ``` 
 
-## event simulation and state assertion
+## Event simulation and state assertion
 ```js
 it('error state when username or password not entered', () => {
     const login = shallow(<Login />);
